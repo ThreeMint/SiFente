@@ -1,7 +1,3 @@
-/* * {
-  padding: 0;
-  margin: 0;
-} */
 ul,
 li {
   padding: 0;
@@ -15,6 +11,7 @@ li {
 
 a {
   text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 body,
@@ -28,9 +25,6 @@ html {
   position: relative;
   width: 100%;
   height: 100vh;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .banner img {
@@ -40,7 +34,6 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* opacity: .7; */
 }
 
 .banner header {
@@ -55,10 +48,9 @@ html {
 
 .banner-header {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
-  /* padding: 1rem; */
   width: 100%;
+  white-space: nowrap;
 }
 
 .banner .logo {
@@ -67,6 +59,7 @@ html {
   font-size: 2rem;
   font-weight: 550;
   text-align: center;
+  margin: 0 20px 0;
 }
 
 .banner .navbar {
@@ -108,7 +101,7 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 900px;
+  /* width: 900px; */
   transform: translate(-50%, -50%);
   color: rgb(214, 209, 209);
   text-align: center;
@@ -143,48 +136,45 @@ html {
 }
 
 .does {
-  position: relative;
   width: 100%;
-  height: 100vh;
-  background-color: rgb(129, 52, 52);
   background-color: #999;
   text-align: center;
 }
 
 .job {
-  position: relative;
-  top: 30%;
-  width: 800px;
-  margin: 0 auto;
-  padding: 1px;
-  transform: translateY(-50%);
+  margin: 0 auto 100px;
+  padding: 40px 60px 0;
 }
 
 .job h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .job>p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .job-img {
-  position: absolute;
-  bottom: 8%;
-  width: 85%;
-  left: 50%;
-  transform: translateX(-50%);
+  padding-bottom: 40px;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .job-img ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
+  margin-bottom: -10px;
 }
 
 .job-img li {
-  /* flex: 1; */
+  margin-bottom: 10px;
+}
+
+.job-item {
+  position: relative;
 }
 
 .job-item img {
@@ -195,20 +185,29 @@ html {
   background-color: #fff;
 }
 
+.job-item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 20px;
+  color: rgb(218, 216, 216);
+}
+
 .product {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
+  /* position: relative; */
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: rgb(223, 223, 223);
   text-align: center;
 }
 
 .prd-top {
-  position: relative;
   top: 50px;
-  margin: 0 auto;
+  margin: 50px auto;
   width: 80vw;
   height: 300px;
   background-color: rgb(173, 87, 87);
@@ -229,27 +228,26 @@ html {
 }
 
 .prd-item {
-  position: relative;
   background-color: #fff;
-  margin: 0 auto;
+  margin: 0 auto 80px;
   width: 80vw;
-
 }
 
 .prd-item ul {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-wrap: wrap;
+  float: left;
+}
+
+.prd-item ul li {
+  display: inline-block;
+  width: 250px;
+  margin: 10px;
 }
 
 .prd-item ul li:nth-child(2n) {
-  /* flex: 1; */
-  background-color: rgb(72, 141, 182);
+  background-color: rgb(209, 27, 255);
 }
 
 .prd-item ul li:nth-child(2n-1) {
-  /* flex: 2; */
   background-color: rgb(93, 182, 82);
 }
 
@@ -259,26 +257,264 @@ html {
   height: 250px;
 }
 
-/* width小于等于1200pxpx */
-@media screen and (max-width: 1200px) {
-
-  /* html,
-  body {
-    font-size: 9px;
-  } */
-  .banner .content p {
-    font-size: 13px;
-  }
+.choice {
+  width: 100%;
+  height: auto;
+  background-color: rgb(199, 90, 90);
+  text-align: center;
 }
+
+.choice-title {
+  position: relative;
+  height: 150px;
+  top: 50px;
+  /* padding: 0 200px; */
+  margin: 0 auto;
+  width: 1100px;
+}
+
+.title-left {
+  /* float: left; */
+  position: absolute;
+  left: 0;
+  text-align: left;
+}
+
+.title-right {
+  /* float: right; */
+  position: absolute;
+  right: 0;
+}
+
+.choice-body {
+  margin: 0 auto;
+  /* width: 1200px; */
+}
+
+.choice-img {
+  display: flex;
+  padding-bottom: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: -20px;
+}
+
+.choice-img div {
+  margin-bottom: 20px;
+}
+
+.img-left {
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-left img {
+  /* flex: 1; */
+  width: 250px;
+}
+
+.img-right {
+  width: 700px;
+  height: 500px;
+  background-color: #fff;
+}
+
+.reviews {
+  width: 100%;
+  height: auto;
+  background-color: rgb(31, 69, 196);
+  text-align: center;
+}
+
+.reviews .content {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.reviews .review-title {
+  position: relative;
+  width: 100%;
+}
+
+.review-title .title {
+  margin-bottom: 30px;
+}
+
+.review-title .see-more {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+}
+
+.content .review-body {
+  width: 100%;
+}
+
+.review-body .r-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.r-box .r-item1 {
+  flex: 1;
+  margin: 8px;
+  height: 400px;
+  background-color: #fff;
+  display: flex;
+}
+
+.r-item1 .item-img {
+  flex: 1;
+  max-width: 350px;
+  padding-top: 30px;
+}
+
+.r-item1 .item-words {
+  flex: 1;
+  padding-top: 30px;
+  padding-right: 15px;
+  text-align: start;
+}
+
+.r-item1 .item-words p {
+  text-indent: 2em;
+  height: 250px;
+  overflow: hidden;
+  line-height: 25px;
+  /* 如果显示不开，溢出的使用省略号 */
+  text-overflow: ellipsis;
+  /* 弹性伸缩盒子模型显示 */
+  display: -webkit-box;
+  /* 限制在一个块元素显示的文本的行数 */
+  -webkit-line-clamp: 10;
+  /* 设置或检索伸缩盒对象的子元素的排列方式 */
+  -webkit-box-orient: vertical;
+}
+
+.r-item1 .item-words .item-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer {
+  background-color: #f6f9fa;
+  padding: 40px;
+}
+
+.link-box {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.link-item {
+  flex: 1;
+  border-right: 1px solid rgb(235, 233, 233);
+  margin-right: 60px;
+  padding: 20px;
+}
+
+.link-item span {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.link-item ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 90px;
+}
+
+.link-item ul a {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 14px;
+
+}
+
+.link-item ul a:hover {
+  color: #1890ff;
+}
+
+.item-3 {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0;
+  border-right: 0;
+}
+
+.link-qrCode {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.link-qrCode:hover {
+  color: #1890ff;
+}
+
+.link-qrCode img {
+  width: 64px;
+  height: 64px;
+}
+
+.link-qrCode span {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.link-info {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.link-info span {
+  flex: 1;
+  font-size: 11px;
+  color: #999;
+}
+
+.link-info .link-logo {
+  flex: 3;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+}
+
+.link-info .link-info-right {
+  text-align: right;
+}
+
+.new {
+  width: 100%;
+  background-color: rgb(124, 197, 191);
+}
+
+.new-list {
+  margin: 0 auto;
+}
+
+.new-item
+/* width小于等于1200pxpx */
+/* @media screen and (max-width: 1200px) {
+
+} */
 
 /* max-width: 768px ,width小于等于768px*/
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
 
-  /* html,
-  body {
-    font-size: 15px;
-  } */
-  .banner .content p {
-    font-size: 10px;
-  }
-}
+  
+} */
