@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>斯芬特墙纸装饰</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/alifont/iconfont.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.0/animate.min.css" />
 </head>
 
 <body>
@@ -14,7 +17,6 @@
   <div class="banner">
     <header>
       <div class="banner-header">
-
         <a href="#" class="logo">斯芬特</a>
         <div class="navbar">
           <ul>
@@ -24,19 +26,66 @@
             <li><a href="#">关于我们</a></li>
           </ul>
         </div>
-        <div class="toggle">菜单</div>
+        <div class="toggle"><i></i><span>0X00-6686552</span></div>
+        <!-- icon -->
+        <i id="menu-btn" class="iconfont icon-caidan"></i>
       </div>
     </header>
-    <img src="img/img02.jpg">
-    <div class="content">
-      <h2>专注墙壁装饰</h2>
-      <p>Lorem ipsum dolor sit amet.
-        Ducimus itaque mollitia enim eum?
-        Officia quae accusamus modi culpa.
-        Ratione laudantium quod maiores inventore!
-        Quod optio praesentium ipsam maiores.</p>
+    <!-- bar-2 -->
+    <div id="navbar2" class="navbar">
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">产品介绍</a></li>
+        <li><a href="#">公司介绍</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
     </div>
-    <!-- 提示下移 -->
+
+    <!-- 轮播图 -->
+    <div class="banner-slider">
+      <!-- 轮播组件 -->
+      <div class="image-slider">
+        <!-- 第一张图片 -->
+        <div class="slider current">
+          <img class="image"
+            src="https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?cs=srgb&dl=pexels-279719.jpg&fm=jpg"
+            alt="家局">
+          <!-- 描述 -->
+          <div class="content">
+            <h1 class="title">第一张</h1>
+            <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </div>
+        <div class="slider">
+          <img class="image"
+            src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?cs=srgb&dl=pexels-584399.jpg&fm=jpg"
+            alt="客厅">
+          <!-- 描述 -->
+          <div class="content">
+            <h1 class="title">第2张</h1>
+            <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </div>
+        <div class="slider">
+          <img class="image"
+            src="https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?cs=srgb&dl=pexels-667838.jpg&fm=jpg"
+            alt="书桌">
+          <!-- 描述 -->
+          <div class="content">
+            <h1 class="title">第3张</h1>
+            <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </div>
+        <div id="prev">
+          <i class="iconfont icon-fanye1"></i>
+        </div>
+        <div id="next">
+          <i class="iconfont icon-fanye"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- 下移三角 -->
     <div class="banner-down">
       <div class="item"></div>
     </div>
@@ -44,85 +93,147 @@
   <!-- body -->
   <!-- 2.does{ job, img} -->
   <div class="does">
-    <div class="job">
-      <h2>我们的工作</h2>
-      <p>Lorem ipsum dolor sit amet.
-        Voluptate architecto ab beatae dolorem.
-        Obcaecati natus consectetur hic vel?
-        Velit explicabo dignissimos dolores qui.
-        Dolore sapiente culpa suscipit accusamus!</p>
-    </div>
-    <div class="job-img">
-      <ul>
-        <li class="job-item"> <img src="" alt="item1">
-          <span>搜索信息</span>
-        </li>
-        <li class="job-item"><img src="" alt="item2">
-          <span>专业定制</span>
-        </li>
-        <li class="job-item"> <img src="" alt="item3">
-          <span>上门设计</span>
-        </li>
-        <li class="job-item"> <img src="" alt="item4">
-          <span>风格自选</span>
-        </li>
-      </ul>
+    <div class="does-content">
+      <div class="job">
+        <h2>我们的工作</h2>
+        <p>Lorem ipsum dolor sit amet.
+          Voluptate architecto ab beatae dolorem.
+          Obcaecati natus consectetur hic vel?
+          Velit explicabo dignissimos dolores qui.
+          Dolore sapiente culpa suscipit accusamus!</p>
+      </div>
+      <div class="job-img">
+        <ul>
+          <li class="job-item">
+            <div class="job-item-img">
+              <!-- <img src="./img/prd_pic/d-02.jpg" alt="item1"> -->
+              <img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/d02.jpg" alt="item1">
+              <span>精确搜索</span>
+            </div>
+            <div class="job-item-content">
+              <span>精确搜索</span>
+              <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+          </li>
+          <li class="job-item">
+            <div class="job-item-img">
+              <!-- <img src="./img/prd_pic/does-01.jpg" alt="item1"> -->
+
+              <img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/does-01-copy.jpg" alt="item1">
+              <span>专业定制</span>
+            </div>
+            <div class="job-item-content">
+              <span>专业定制</span>
+              <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+          </li>
+          <li class="job-item">
+            <div class="job-item-img">
+              <!-- <img src="./img/prd_pic/d-03.jpg" alt="item1"> -->
+              <img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/d03.jpg" alt="上门设计" />
+              <span>上门设计</span>
+            </div>
+            <div class="job-item-content">
+              <span>上门设计</span>
+              <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+          </li>
+          <li class="job-item">
+            <div class="job-item-img">
+              <!-- <img src="./img/prd_pic/d-04.jpg" alt="item1"> -->
+              <img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/d-04-copy.png" alt="item1">
+              <span>风格自选</span>
+            </div>
+            <div class="job-item-content">
+              <span>风格自选</span>
+              <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <!-- 3.product -->
   <div class="product">
     <div class="prd-top">
       <div class="pro-top-left">
+        <!-- <hr> -->
+        <div class="line"></div>
         <h2>我们的产品多样</h2>
         <p>Lorem ipsum dolor sit amet.
           Ducimus itaque mollitia enim eum?
         </p>
       </div>
       <div class="pro-top-right">
-        <img src="#" alt="图片">
+        <img src="./img/prd_pic/w-52901.jpg" alt="图片">
       </div>
 
     </div>
     <div class="prd-item">
       <ul>
-        <li><img src="#" alt="图1"></li>
-        <li><img src="#" alt="图2"></li>
-        <li><img src="#" alt="图3"></li>
-        <li><img src="#" alt="图4"></li>
-        <li><img src="#" alt="图5"></li>
-        <li><img src="#" alt="图6"></li>
-        <li><img src="#" alt="图1"></li>
-        <li><img src="#" alt="图2"></li>
-        <li><img src="#" alt="图3"></li>
-        <!-- <li><img src="#" alt="图4"></li>
-        <li><img src="#" alt="图5"></li>
-        <li><img src="#" alt="图6"></li> -->
-
+        <li>
+          <img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/52701.jpg" alt="No.156">
+          <div class="prd-item-content">雅青百花<span>No.156</span></div>
+        </li>
+        <li><img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/52711.jpg" alt="No.249">
+          <div class="prd-item-content">素线<span>No.249</span></div>
+        </li>
+        <li><img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/52703.jpg" alt="No.658">
+          <div class="prd-item-content">欧式罗叶<span>No.658</span></div>
+        </li>
+        <li><img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/52704.jpg" alt="No.058">
+          <div class="prd-item-content">藏青菱<span>No.058</span></div>
+        </li>
+        <li><img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/52705.jpg" alt="No.269">
+          <div class="prd-item-content">紫罗兰<span>No.269</span></div>
+        </li>
+        <li><img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/52706.jpg" alt="No.846">
+          <div class="prd-item-content">欧美刻纹<span>No.846</span></div>
+        </li>
+        <li><img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/52707.jpg" alt="No.233">
+          <div class="prd-item-content">棕禅<span>No.233</span></div>
+        </li>
+        <li><img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/52708.jpg" alt="No.669">
+          <div class="prd-item-content">渐变菱花<span>No.669</span></div>
+        </li>
+        <li><img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/52709.jpg" alt="No.104">
+          <div class="prd-item-content">手画动图<span>No.104</span></div>
+        </li>
+        <li><img src="https://mists.oss-cn-shanghai.aliyuncs.com/img/52710.jpg" alt="No.752">
+          <div class="prd-item-content">铬砖<span>No.752</span></div>
+        </li>
       </ul>
     </div>
     <div class="prd-line2"></div>
   </div>
-
+  <!-- fullbar -->
+  <div class="fullbar">
+    <div class="fullbar-item"></div>
+  </div>
   <!-- 4.choice style-->
   <div class="choice">
-    <div class="choice-title">
-      <div class="title-left">
-        <span>任意挑选你中意的风格</span>
-        <h2>自由定制风格</h2>
-      </div>
-      <div class="title-right">
-        <span>查看更多</span>
-      </div>
-    </div>
-    <div class="choice-body">
-      <div class="choice-img">
-        <div class="img-left">
-          <img src="#" alt="c图1">
-          <img src="#" alt="c图2">
-          <img src="#" alt="c图3">
-          <img src="#" alt="c图4">
+    <div class="choice-box">
+      <div class="choice-title">
+        <div class="title-left">
+          <span>任意挑选你中意的风格</span>
+          <h2>#自由定制风格</h2>
         </div>
-        <div class="img-right"></div>
+        <div class="title-right">
+          <span>查看更多</span>
+        </div>
+      </div>
+      <div class="choice-body">
+        <div class="choice-img">
+          <div class="img-left">
+            <div class="img-left-item"><img src="./img/prd_pic/w-52903-250x.jpg" alt="c图1"></div>
+            <div class="img-left-item"> <img src="./img/prd_pic/w-52904-250x.jpg" alt="c图2"></div>
+            <div class="img-left-item"> <img src="./img/prd_pic/w-52905-250x.jpg" alt="c图3"></div>
+            <div class="img-left-item"> <img src="./img/prd_pic/w-52906-250x.jpg" alt="c图4"></div>
+          </div>
+          <div class="img-right">
+            <img src="./img/prd_pic/w-52902.jpg" alt="定制墙布">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -131,7 +242,7 @@
     <div class="content">
       <div class="review-title">
         <div class="title">
-          <h2>有超过3000条评论</h2>
+          <h2>有超过300<span class="title-number">2</span>条评论</h2>
           <span>选自我们的客户</span>
         </div>
         <div class="see-more">更多</div>
@@ -140,7 +251,7 @@
         <div class="r-box">
           <div class="r-item1">
             <div class="item-img">
-              <img src="#" alt="评论图1">
+              <img src="./img/prd_pic/52908-280x300.jpg" alt="评论1">
             </div>
             <div class="item-words">
               <span class="item-title">Lorem ipsum dolor</span>
@@ -151,12 +262,16 @@
                 asdasdadasd，按时打算的看撒扩大阿斯顿，按时打算离开军队立刻撒旦。asldjklksa拉开圣诞节我i的了；拉克丝到了；旅客流量啊阿三大苏打
                 asdasdadasd，按时打算的看撒扩大阿斯顿，按时打算离开军队立刻撒旦
               </p>
-              <span><img src="#" alt="客户1">Hoolle kitty</span>
+              <div class="user">
+                <img class="user-pic" src="#" alt="客户1">
+                <span class="user-name">Hoolle kitty</span>
+
+              </div>
             </div>
           </div>
           <div class="r-item1">
             <div class="item-img">
-              <img src="#" alt="评论图1">
+              <img src="./img/prd_pic/52909-280x300.jpg" alt="评论图1">
             </div>
             <div class="item-words">
               <span class="item-title">2-Lorem ipsum dolor</span>
@@ -167,7 +282,11 @@
                 asdasdadasd，按时打算的看撒扩大阿斯顿，按时打算离开军队立刻撒旦。asldjklksa拉开圣诞节我i的了；拉克丝到了；旅客流量啊阿三大苏打
                 asdasdadasd，按时打算的看撒扩大阿斯顿，按时打算离开军队立刻撒旦
               </p>
-              <span><img src="#" alt="客户2">Swift</span>
+              <div class="user">
+                <img class="user-pic" src="#" alt="客户2">
+                <span class="user-name">Swift</span>
+
+              </div>
             </div>
           </div>
         </div>
@@ -177,38 +296,106 @@
   <!-- 6.news -->
   <div class="new">
     <div class="new-list">
-      <ul>
-        <li class="new-item">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-      </ul>
+      <div class="new-list-body">
+        <div class="new-title">
+          <h2>#企业<span>新闻</span></h2>
+        </div>
+        <ul>
+          <li class="new-item">
+            <!-- <div class="new-item-text">
+              <a href="javascript:(0)">2020年企业内部项目比赛</a>
+            </div> -->
+            <a href="javascript:(0)">
+              <div class="new-item-text">
+                <div class="new-item-title">2020年企业内部项目比赛</div>
+                <div class="new-item-data">20/05/06</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:(0)">
+              <div class="new-item-text">
+                <div class="new-item-title">本公司容获2019年度创新企业</div>
+                <div class="new-item-data">19/09/25</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:(0)">
+              <div class="new-item-text">
+                <div class="new-item-title">2019届中国（北京）国际墙纸，墙布软装博览会</div>
+                <div class="new-item-data">19/05/06</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:(0)">
+              <div class="new-item-text">
+                <div class="new-item-title">斯芬特墙布品牌如何？斯芬特墙纸的优点有哪些？</div>
+                <div class="new-item-data">19/04/22</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:(0)">
+              <div class="new-item-text">
+                <div class="new-item-title">斯芬特墙布柔华（新品推荐）</div>
+                <div class="new-item-data">19/01/07</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:(0)">
+              <div class="new-item-text">
+                <div class="new-item-title">关于墙布和刺绣的不得不说的事情</div>
+                <div class="new-item-data">18/12/06</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:(0)">
+              <div class="new-item-text">
+                <div class="new-item-title">你真的了解家庭软装吗？</div>
+                <div class="new-item-data">18/11/25</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="new-list-img">
+        <div class="new-img">
+          <img
+            src="https://images.pexels.com/photos/1099816/pexels-photo-1099816.jpeg?cs=srgb&dl=pexels-1099816.jpg&fm=jpg"
+            alt="新闻1">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- backToTop -->
+  <div class="back-top">
+    <div class="back-content">
+      <img src="./img/icon/back-top.svg" alt="back-Top">
     </div>
   </div>
   <!-- footer -->
   <footer class="footer">
     <div class="link-box">
       <div class="link-item item-1">
-        <span class="link-title">传送门1</span>
+        <span class="link-title">友情链接</span>
         <ul>
-          <a href="#" target="_blank">好友链接1</a>
-          <a href="#" target="_blank">b</a>
-          <a href="#" target="_blank">c</a>
+          <a href="javascript:(0)">好埔墙纸</a>
+          <a href="javascript:(0)">全馨装饰有限公司</a>
+          <a href="javascript:(0)">群发世家高端壁画</a>
         </ul>
       </div>
-
       <div class="link-item item-2">
         <span class="link-title">传送门2</span>
         <ul>
-          <a href="#" target="_blank">a</a>
-          <a href="#" target="_blank">b</a>
-          <a href="#" target="_blank">c</a>
+          <a href="www.baidu.com" target="_blank">百度搜索</a>
+          <a href="javascript:(0)">动画animate</a>
+          <a href="javascript:(0)">全国家装装饰协会</a>
         </ul>
       </div>
-
       <div class="link-item item-3">
         <div class="link-qrCode">
           <img src="./img/icon/download-grey.svg">
@@ -223,17 +410,7 @@
           <span>新浪微博</span>
         </div>
       </div>
-
-      <!-- <div class="link-item">
-        <span class="link-title">传送门4</span>
-        <ul>
-          <a href="#" target="_blank">a</a>
-          <a href="#" target="_blank">b</a>
-          <a href="#" target="_blank">c</a>
-        </ul>
-      </div> -->
     </div>
-
     <div class="link-info">
       <span>@Xhm.2020</span>
       <span>Demo(Wallpaper)</span>
@@ -242,7 +419,6 @@
       <span class="link-info-right">@FeiY</span>
     </div>
   </footer>
-
   <script src="js/index.js"></script>
 </body>
 

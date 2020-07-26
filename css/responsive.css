@@ -1,0 +1,262 @@
+/* <= 425px */
+@media screen and (max-width: 580px) {
+
+  /* body,
+  html {
+    font-size: 12px;
+  } */
+
+  .banner #navbar2 {
+    flex-direction: column;
+    line-height: 30px;
+    background-color: rgba(49, 49, 49, 0.8);
+  }
+
+  .banner .navbar ul {
+    line-height: 2rem;
+  }
+
+  .banner .navbar li {
+    display: block;
+    border-bottom: 1px solid #999;
+    z-index: 999;
+  }
+
+  .banner .content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+
+  .choice-img .img-right {
+    width: 250px;
+  }
+
+  /* review */
+  .reviews {
+    padding-bottom: 1px;
+  }
+
+  /* new */
+  .new-list {
+    padding: 0 0 25px;
+  }
+
+  /* back */
+  .back-top {
+    height: 30px;
+  }
+
+  .back-top .back-content {
+    width: 25px;
+  }
+
+  /* footer */
+  .footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .footer .link-box .link-item {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .link-box .link-item span {
+    margin-top: 10px;
+  }
+
+  .link-box .link-qrCode img {
+    width: 48px;
+  }
+
+  .link-box .link-qrCode span {
+    font-size: 12px;
+  }
+}
+
+/* max-width: 768px ,
+width小于等于768px,最大宽度768px
+  <= 768px
+*/
+@media screen and (max-width: 768px) {
+
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+  }
+
+  .banner-header {
+    display: flex;
+  }
+
+  .banner .logo {
+    position: absolute;
+    top: 3.7vw;
+    left: 5.9vw;
+    font-size: 1.8rem;
+  }
+
+  .banner .toggle {
+    display: none;
+  }
+
+  .banner #navbar2 {
+    position: absolute;
+    width: 100%;
+    z-index: 15;
+    background-color: rgba(49, 49, 49, 0.8);
+  }
+
+  .banner-header .navbar {
+    display: none;
+  }
+
+  .isHide {
+    display: none;
+  }
+
+  /* .banner .navbar ul {
+    line-height: 4rem;
+  } */
+
+  .banner #navbar2 li:hover {
+    cursor: pointer;
+  }
+
+  .banner .navbar li a:hover {
+    border-bottom: 0px;
+  }
+
+  .banner .navbar li:hover a:hover {
+    color: #1890ff;
+  }
+
+  .banner-header i {
+    position: absolute;
+    top: 3.7vw;
+    right: 8.5vw;
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* slider */
+  /* 文字占满屏幕 */
+  .image-slider .slider .content {
+    width: 100%;
+  }
+
+  /* 控制按钮大小和间距缩小 */
+  #prev,
+  #next {
+    font-size: 24px;
+    left: 24px;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    top: 40%;
+  }
+
+  /* 移动下一张按钮，使间距变小 */
+  #next {
+    left: unset;
+    right: 24px;
+  }
+
+  /* product */
+  .prd-top {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .pro-top-left {
+    /* padding: 20px; */
+    order: 2;
+  }
+
+  .pro-top-right {
+    order: 1;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .prd-item img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* choice */
+  .choice-img div {
+    height: auto;
+  }
+
+  /* news */
+  .new .new-list .new-list-body {
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* footer */
+  .footer {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .footer .link-box {
+    flex-direction: column;
+    margin: 5px 0;
+  }
+
+  .link-box .link-item {
+    border-bottom: 1px solid rgb(235, 233, 233);
+    border-right: 0;
+    margin-bottom: 20px;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .footer .link-info {
+    flex-direction: column;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .link-info .link-info-right {
+    text-align: center;
+  }
+}
+
+/* <= 1200px */
+/* @media screen and (max-width: 1024px) {
+  .new .new-list .new-list-body {
+    margin: 0 auto;
+  }
+
+  .new .new-list .new-list-img {
+    display: none;
+  }
+} */
+
+/* <= 1200px */
+@media screen and (max-width: 1316px) {
+  .choice-img .img-right {
+    margin-top: 10px;
+  }
+
+  .new .new-list .new-list-body {
+    margin: 0 auto;
+    /* width: 100%; */
+    padding: 0px 50px;
+  }
+
+  .new .new-list .new-list-img {
+    display: none;
+  }
+}
