@@ -10,6 +10,12 @@
     flex-direction: column;
     line-height: 30px;
     background-color: rgba(49, 49, 49, 0.8);
+    transform: translateY(-100%);
+    transition: all .4s ease-in-out;
+  }
+
+  .navbar-move {
+    transform: translateY(0) !important;
   }
 
   .banner .navbar ul {
@@ -30,13 +36,45 @@
     -webkit-box-orient: vertical;
   }
 
-  .choice-img .img-right {
-    width: 250px;
+  /* does */
+  .job-item .job-item-img {
+    width: 200px;
+    height: 200px;
   }
+
+  /* product */
+  .prd-item ul li {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* choice */
+  .choice-body .choice-img .img-left .img-left-item {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+  }
+
+  /* .choice-img .img-right {
+    width: 250px;
+  } */
 
   /* review */
   .reviews {
     padding-bottom: 1px;
+  }
+
+  .review-body .r-box {
+    flex-direction: column;
+  }
+
+  .r-box .r-item1 {
+    margin-bottom: 2px;
+    width: auto;
+  }
+
+  .r-item1 .item-img {
+    padding: 30px 0 10px 10px;
   }
 
   /* new */
@@ -96,7 +134,7 @@ width小于等于768px,最大宽度768px
 
   .banner .logo {
     position: absolute;
-    top: 3.7vw;
+    /* top: 3.7vw; */
     left: 5.9vw;
     font-size: 1.8rem;
   }
@@ -108,8 +146,15 @@ width小于等于768px,最大宽度768px
   .banner #navbar2 {
     position: absolute;
     width: 100%;
-    z-index: 15;
+    z-index: 10;
+    display: block;
+    transform: translateY(-100%);
     background-color: rgba(49, 49, 49, 0.8);
+    transition: all .5s;
+  }
+
+  .navbar-move {
+    transform: translateY(0) !important;
   }
 
   .banner-header .navbar {
@@ -138,7 +183,7 @@ width小于等于768px,最大宽度768px
 
   .banner-header i {
     position: absolute;
-    top: 3.7vw;
+    /* top: 3.7vw; */
     right: 8.5vw;
     display: block;
     font-size: 2rem;
@@ -146,6 +191,11 @@ width小于等于768px,最大宽度768px
   }
 
   /* slider */
+  .banner-slider {
+    position: relative;
+    z-index: 9;
+  }
+
   /* 文字占满屏幕 */
   .image-slider .slider .content {
     width: 100%;
@@ -194,6 +244,12 @@ width小于等于768px,最大宽度768px
   /* choice */
   .choice-img div {
     height: auto;
+  }
+
+  .choice-img .img-left .img-left-item {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
   }
 
   /* news */

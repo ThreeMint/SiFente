@@ -15,7 +15,7 @@ function debounce(func, delay) {
 }
 
 // 顶部菜单显示
-let isMenuShow = true;; //不显示
+/* let isMenuShow = true;; //不显示
 window.addEventListener('resize', function () {
   if (window.innerWidth <= 768) {
     isMenuShow = true;
@@ -27,24 +27,25 @@ window.addEventListener('resize', function () {
     // navbar.style.display = '';
     navbar2.style.display = '';
   }
-})
+}) */
 
 menuBtn.addEventListener('click', function () {
-  if (!isMenuShow) {
-    navbar2.classList.remove("animate__fadeInDown");
-    navbar2.classList.add("animate__animated", "animate__fadeOutUp")
-    // navbar.style.display = 'none';
-    setTimeout(() => {
-      navbar2.style.display = 'none';
-    }, 500)
-    isMenuShow = true;
-  } else {
-    navbar2.classList.remove("animate__fadeOutUp");
-    navbar2.classList.add("animate__animated", "animate__fadeInDown")
-    navbar2.style.display = 'block';
+  // if (!isMenuShow) {
+  //   navbar2.classList.remove("animate__fadeInDown");
+  //   navbar2.classList.add("animate__animated", "animate__fadeOutUp")
+  //   // navbar.style.display = 'none';
+  //   setTimeout(() => {
+  //     navbar2.style.display = 'none';
+  //   }, 500)
+  //   isMenuShow = true;
+  // } else {
+  //   navbar2.classList.remove("animate__fadeOutUp");
+  //   navbar2.classList.add("animate__animated", "animate__fadeInDown")
+  //   navbar2.style.display = 'block';
 
-    isMenuShow = false;
-  }
+  //   isMenuShow = false;
+  // }
+  navbar2.classList.toggle("navbar-move");
 })
 
 // 轮播图
