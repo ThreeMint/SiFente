@@ -3,48 +3,8 @@ const banner_header = document.querySelector('.banner-header');
 const menuBtn = document.querySelector('#menu-btn');
 const navbar = document.querySelector('.navbar');
 const navbar2 = document.querySelector('#navbar2');
-// 防抖函数
-function debounce(func, delay) {
-  let timer = null;
-  return function (...args) {
-    if (timer) clearTimeout(timer);
-    timer = setTimeout(() => {
-      func.apply(this, args);
-    }, delay);
-  };
-}
-
-// 顶部菜单显示
-/* let isMenuShow = true;; //不显示
-window.addEventListener('resize', function () {
-  if (window.innerWidth <= 768) {
-    isMenuShow = true;
-    // navbar.style.display = 'none';
-    navbar2.style.display = 'none';
-  } else {
-    isMenuShow = false;
-    // navbar.classList.remove("animate__animated", "animate__fadeInDown", "animate__fadeOutUp");
-    // navbar.style.display = '';
-    navbar2.style.display = '';
-  }
-}) */
 
 menuBtn.addEventListener('click', function () {
-  // if (!isMenuShow) {
-  //   navbar2.classList.remove("animate__fadeInDown");
-  //   navbar2.classList.add("animate__animated", "animate__fadeOutUp")
-  //   // navbar.style.display = 'none';
-  //   setTimeout(() => {
-  //     navbar2.style.display = 'none';
-  //   }, 500)
-  //   isMenuShow = true;
-  // } else {
-  //   navbar2.classList.remove("animate__fadeOutUp");
-  //   navbar2.classList.add("animate__animated", "animate__fadeInDown")
-  //   navbar2.style.display = 'block';
-
-  //   isMenuShow = false;
-  // }
   navbar2.classList.toggle("navbar-move");
 })
 
@@ -59,7 +19,7 @@ var currentIndex = 0;
 // 播放方向，前进或后退。false后退，true前进
 var forward = true;
 // 自动播放间隔，5秒
-var interval = 5000;
+var interval = 4000;
 next.addEventListener("click", handleNextClicked);
 prev.addEventListener("click", handlePrevClicked);
 
@@ -67,7 +27,6 @@ prev.addEventListener("click", handlePrevClicked);
 function mouseEvent(element) {
   // 鼠标移入停止播放
   element.addEventListener("mouseenter", function () {
-    console.log(111);
     clearInterval(slider_timer);
     slider_timer = null; //释放，清楚定时器
   });
@@ -131,3 +90,24 @@ const backTop = document.querySelector('.back-content');
 backTop.addEventListener('click', function () {
   animate(window, 0);
 });
+
+const fullbar = document.querySelector('.fullbar');
+const fullbarItem = document.querySelector('.fullbar-item');
+let cHeight = document.documentElement.clientHeight;
+document.addEventListener('scroll', (e) => {
+  let sTop = document.documentElement.scrollTop;
+  // console.log(sTop, cHeight);
+
+  let fullbarsoffsetTop = fullbar.offsetTop;
+  // let fullbarsoffsetHeight = fullbarsoffsetTop + 177;
+  // let fullbarsHeight = fullbar.scrollHeight;
+  // console.log(fullbar.scrollHeight);
+  // console.log(fullbarsoffsetTop,fullbarsoffsetHeight, fullbarsHeight);
+
+  // console.log("窗口的75%," + cHeight*0.75);
+  // console.log("bar上方 - 窗口一半," + fheight);
+  let fheight = fullbarsoffsetTop - (cHeight*0.75);
+  if (sTop >= fheight) {
+    fullbarItem.classList.add("fullbar-show");
+  }
+})
