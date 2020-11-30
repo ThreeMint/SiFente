@@ -337,10 +337,10 @@
 
 /* <= 1200px */
 @media screen and (max-width: 1316px) {
-  .choice-img .img-right {
-    /* margin-top: 10px; */
-    /* width: 100%; */
-  }
+  /* .choice-img .img-right {
+    margin-top: 10px;
+    width: 100%;
+  } */
 
   .new .new-list .new-list-body {
     margin: 0 auto;

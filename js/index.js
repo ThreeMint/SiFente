@@ -7,7 +7,6 @@ const navbar2 = document.querySelector('#navbar2');
 menuBtn.addEventListener('click', function () {
   navbar2.classList.toggle("navbar-move");
 })
-
 // 轮播图
 const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
@@ -63,7 +62,6 @@ function handlePrevClicked() {
   slides[currentIndex].classList.add("current");
 }
 
-// back to top
 //obj,目标对象  target，目标位置    
 function animate(obj, target, callback) {
   //解决：先清除以前的定时器，只保留当前的一个定时器执行
@@ -110,11 +108,8 @@ document.addEventListener('scroll', (e) => {
   }
 })
 
-
 /**
  * 在指定的 DOM 元素中动态显示数值
- * 作者：triplestudio@sina.com
- *
  * @param elementId :  DOM 元素ID
  * @param number  :  数值
  */
