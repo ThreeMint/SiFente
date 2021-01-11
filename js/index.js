@@ -89,20 +89,36 @@ backTop.addEventListener('click', function () {
 
 const fullbar = document.querySelector('.fullbar');
 const fullbarItem = document.querySelector('.fullbar-item');
+
+const choice = document.querySelector('.choice');
+const product = document.querySelector('.product');
+const productItem = document.querySelector('.product .prd-item');
+
 const review = document.querySelector('.reviews');
 const reviewCount = document.querySelector('#comment-count .title-number');
 let cHeight = document.documentElement.clientHeight;
-let finished = true;//scroll事件中，执行一次标记
+// 获取滚动条高度
+function getScrollTop() {
+  let scroll_top = 0;
+  if (document.documentElement && document.documentElement.scrollTop) {
+      scroll_top = document.documentElement.scrollTop;
+  }
+  else if (document.body) {
+      scroll_top = document.body.scrollTop;
+  }
+  return scroll_top;
+}
+let finished = true;
+let viewHeight = window.innerHeight/1.4
+console.log(viewHeight);
 document.addEventListener('scroll', (e) => {
-  let sTop = document.documentElement.scrollTop;
-
-  let fheight = fullbar.offsetTop - (cHeight * 0.75);
-  if (sTop >= fheight) {
+  let documentScrolTop = getScrollTop();
+  let fullbarToTop = fullbar.offsetTop - documentScrolTop;
+  if (fullbarToTop < viewHeight) {
     fullbarItem.classList.add("fullbar-show");
   }
-
-  let reviewHeight = review.offsetTop - (cHeight * 0.5);
-  if (finished && sTop >= reviewHeight) {
+  let reviewToTop = review.offsetTop + 135 - documentScrolTop;
+  if (finished && reviewToTop < viewHeight) {
     finished = false;
     DynamicNumber.show("co-count", 3016);
   }
